@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeatherApp</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="clear-day">
+<main>
+  <form class="search" id="searchForm">
+    <input id="city" type="text" placeholder="Search a city" aria-label="City" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <div class="tools">
+    <button class="ghost" id="locBtn" type="button">Use my location</button>
+    <button class="ghost" id="nameBtn" type="button">Change name</button>
+  </div>
+
+  <h1 id="greeting">Hello</h1>
+  <p id="place">Pick a city to see the weather.</p>
+
+  <p class="temp" id="temp">--°</p>
+  <p class="cond" id="cond"></p>
+  <p class="range" id="range"></p>
+
+  <div class="stats">
+    <div class="stat"><span>Feels like</span><strong id="feels">--</strong></div>
+    <div class="stat"><span>Humidity</span><strong id="hum">--</strong></div>
+    <div class="stat"><span>Wind</span><strong id="wind">--</strong></div>
+  </div>
+
+  <p id="msg" role="status"></p>
+</main>
+
+<dialog id="nameDialog">
+  <form method="dialog" id="nameForm">
+    <h2>Welcome</h2>
+    <p>What should I call you?</p>
+    <input id="nameInput" type="text" placeholder="Your name" maxlength="30" autocomplete="given-name">
+    <button type="submit">Continue</button>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
